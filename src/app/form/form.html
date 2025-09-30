@@ -1,0 +1,28 @@
+<p>form works!</p>
+<div class="h-screen w-screen  justify-center   ">
+  <div class=" p-5 bg-gray-200 ">
+    <form action="" [formGroup]="user" (ngSubmit)="onsubmit()">
+      <div>
+        <label for="Username">Username</label>
+        <input type="text" name="Username" id="Username" formControlName="Username" class="w-full bg-white p-1 border-1 rounded" placeholder="Username">
+      </div>
+      <div>
+        <label for="Username">Email</label>
+        <input type="email" name="Email" id="Email" formControlName="Email" class="w-full bg-white p-1border-1 rounded" placeholder="Email">
+      </div>
+      <div>
+        <label for="Username">Phone</label>
+        <input type="number" name="Phone" id="Phone" formControlName="Phone" class="w-full bg-white p-1 border-1 rounded" placeholder="number">
+      </div>
+      <div class="flex justify-center p-10 ">
+        <input type="submit" value="submit" class="bg-cyan-200 p-2 rounded">
+      </div>
+    </form>
+  </div>
+  {{user.value|json}}
+
+<!-- {{Username.value}}
+
+{{Email.value}}
+{{Phone.value}} -->
+</div>
